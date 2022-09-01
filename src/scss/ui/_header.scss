@@ -1,6 +1,6 @@
-@use '../custom' as *;
-@use '../utils/maps' as map;
-@use '../utils/extends';
+@use "../custom" as *;
+@use "../utils/maps" as map;
+@use "../utils/extends";
 
 // Estilos Generales
 * {
@@ -52,7 +52,6 @@ h4 {
 
 .header__redes,
 .footer__redes {
-
     .fab::before {
         font-size: $font-size-base * 2;
     }
@@ -74,7 +73,7 @@ h4 {
     --bs-dropdown-font-size: $font-size-base;
 }
 
-.navbar>.container-fluid {
+.navbar > .container-fluid {
     justify-content: flex-end;
 }
 
@@ -86,20 +85,26 @@ h4 {
     background-color: map-get($colors, primary);
 }
 
+.nav-item:last-child {
+    @include media-breakpoint-up(md) {
+        margin-left: $font-size-base;
+    }
+}
+
 .nav-link {
     display: inline-block;
 }
 
 .dropdown-toggle::after {
     color: map-get(map.$blackscale, negro-55);
-    @include  media-breakpoint-up(md) {
+    @include media-breakpoint-up(md) {
         color: map-get($colors, primary);
     }
 }
 
 .dropdown-toggle:hover::after {
     transform: rotate(-90deg);
-    @include  media-breakpoint-up(md) {
+    @include media-breakpoint-up(md) {
         transform: none;
     }
 }
@@ -107,13 +112,12 @@ h4 {
 .navbar-expand-md {
     .navbar-nav {
         .dropdown-menu {
-            @include  media-breakpoint-up(md) {
+            @include media-breakpoint-up(md) {
                 top: $font-size-base * 2;
             }
         }
     }
 }
-
 
 .offcanvas {
     --bs-offcanvas-width: 30.5rem;

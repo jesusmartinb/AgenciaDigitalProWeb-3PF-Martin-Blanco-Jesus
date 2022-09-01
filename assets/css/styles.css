@@ -11649,6 +11649,12 @@ h4 {
   background-color: aliceblue;
 }
 
+@media (min-width: 768px) {
+  .nav-item:last-child {
+    margin-left: 2rem;
+  }
+}
+
 .nav-link {
   display: inline-block;
 }
